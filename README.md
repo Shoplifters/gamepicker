@@ -1,6 +1,6 @@
 # gamepicker
 
-Random game chooser. Add/remove games from `games.txt`. Does not allow the same game twice in a row. gamepicker reads `games.txt` every time it launches, so edits made while it is running will not show up in the program until it is restarted.
+Random game chooser from options in `games.txt`. Does not allow the same game twice in a row. Now pulls from `games.txt` in the Github repo instead of from the local file for synchronization support.
 
 ## Build
 
