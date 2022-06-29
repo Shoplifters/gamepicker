@@ -4,4 +4,4 @@ Random game chooser from options in `games.txt`. Does not allow the same game tw
 
 ## Build
 
-Install make and SBCL for your system. Then simply run `make` in the `gamepicker` directory and you should be off to the races! Note that you will need to rename the executable from `gamepicker` to `gamepicker.exe` if you are compiling on Windows.
+Install make and SBCL for your system. Then simply run `make` in the `gamepicker` directory and you should be off to the races!
