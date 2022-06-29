@@ -11,6 +11,6 @@
     (setf *exec-name* 
 	  (concatenate 'string *exec-name* "-" gamepicker:*version* ".exe")))
 
-(ensure-directories-exist "./build/")
+(ensure-directories-exist *build-dir*)
 
 (sb-ext:save-lisp-and-die *exec-name* :toplevel #'gamepicker:main :executable t)
