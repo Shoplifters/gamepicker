@@ -4,7 +4,13 @@
 (in-package #:build)
 (load "gamepicker.lisp")
 
-(defparameter *exec-name* "gamepicker")
-(if (string-equal (software-type) "Win32") (setf *exec-name* "gamepicker.exe"))
+(defparameter *build-dir* "./build/")
+(defparameter *exec-name* (concatenate 'string *build-dir* "gamepicker"))
+
+(if (string-equal (software-type) "Win32") 
+    (setf *exec-name* 
+	  (concatenate 'string *exec-name* "-" gamepicker:*version* ".exe")))
+
+(ensure-directories-exist "./build/")
 
 (sb-ext:save-lisp-and-die *exec-name* :toplevel #'gamepicker:main :executable t)
