@@ -6,7 +6,7 @@
 
 (in-package #:gamepicker)
 
-(defparameter *version* "v1.1")
+(defparameter *version* "v1.2")
 
 (defparameter *games-list-url* "https://raw.githubusercontent.com/Shoplifters/gamepicker/main/games.txt")
 
