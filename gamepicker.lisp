@@ -2,7 +2,7 @@
   (:use :cl)
   (:export :main :*version*))
 
-(ql:quickload "drakma")
+(ql:quickload "dexador")
 
 (in-package #:gamepicker)
 
@@ -16,8 +16,8 @@
 (defun main ()
   (format t "GAMEPICKER ~a~%(c) 2022 Oliver Delancey~%~%" *version*)
   (force-output)
-  (let ((games (remove-if (lambda (x) (string-equal x "")) 
-			  (uiop:split-string (drakma:http-request *games-list-url*) :separator '(#\Newline))))
+  (let ((games (remove-if (lambda (x) (string-equal x ""))
+                          (uiop:split-string (dexador:get *games-list-url*) :separator '(#\Newline))))
         (switch nil)
         (*random-state* (make-random-state t))
         (prev-choice ""))
