@@ -9,3 +9,7 @@ Go to [Releases](https://github.com/Shoplifters/gamepicker/releases) and downloa
 ## Build
 
 Install make and SBCL for your system. Then simply run `make` in the `gamepicker` directory and you should be off to the races!
+
+## Common Errors
+
+If the executable or build process fails and complains about `libssl` or something similar, it means you need to install a version of openssl for your system and add it to your path.
